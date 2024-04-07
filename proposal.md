@@ -20,7 +20,7 @@
 ![imagen del modelo]()
 
 *Nota*: incluir un link con la imagen de un modelo, puede ser modelo de dominio, diagrama de clases, DER. Si lo prefieren pueden utilizar diagramas con [Mermaid](https://mermaid.js.org) en lugar de imágenes.
-
+Modelo de dominio: [https://drive.google.com/drive/folders/1plfqKYozPPYJY6YgyQEiOHqnKOYbRe8-]
 ## Alcance Funcional 
 
 ### Alcance Mínimo
