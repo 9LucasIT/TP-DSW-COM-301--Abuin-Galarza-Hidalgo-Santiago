@@ -2,7 +2,10 @@
 
 ## Grupo
 ### Integrantes
-* legajo - Apellido(s), Nombre(s)
+/*Santiago, Lucas
+*Hidalgo, Tomas
+*Galarza, Nicolas
+*Abuin, Leonel
 
 ### Repositorios
 * [frontend app](http://hyperlinkToGihubOrGitlab)
