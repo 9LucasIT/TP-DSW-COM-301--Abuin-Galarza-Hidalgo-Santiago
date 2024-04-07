@@ -2,10 +2,10 @@
 
 ## Grupo
 ### Integrantes
-/*Santiago, Lucas
-*Hidalgo, Tomas
-*Galarza, Nicolas
-*Abuin, Leonel
+/(51219)*Santiago, Lucas
+*(50972)Hidalgo, Tomas
+*(50408)Galarza, Nicolas
+*(50729)Abuin, Leonel
 
 ### Repositorios
 * [frontend app](http://hyperlinkToGihubOrGitlab)
