@@ -39,8 +39,8 @@ Regularidad:
 Adicionales para Aprobación
 |Req|Detalle|
 |:-|:-|
-|CRUD |1. CRUD Tipo Habitacion<br>2. CRUD Servicio<br>3. CRUD Localidad<br>4. CRUD Provincia<br>5. CRUD Habitación<br>6. CRUD Empleado<br>7. CRUD Cliente|
-|CUU/Epic|1. Reservar una habitación para la estadía<br>2. Realizar el check-in de una reserva<br>3. Realizar el check-out y facturación de estadía y servicios|
+|CRUD |1. CRUD Tipo Producto<br>2. CRUD Precio<br>3. CRUD Cliente<br>4. CRUD Pedido<br>5. CRUD Producto<br>6. CRUD Marca<br>7. CRUD -|
+|CUU/Epic|1. Realizar un pedido<br>2. Reponer stock<br>3. Cancelar un pedido<br>4. Envio de recordatorio de pedido por mail|
 
 
 ### Alcance Adicional Voluntario
@@ -49,7 +49,7 @@ Adicionales para Aprobación
 
 |Req|Detalle|
 |:-|:-|
-|Listados |1. Estadía del día filtrado por fecha muestra, cliente, habitaciones y estado <br>2. Reservas filtradas por cliente muestra datos del cliente y de cada reserve fechas, estado cantidad de habitaciones y huespedes|
-|CUU/Epic|1. Consumir servicios<br>2. Cancelación de reserva|
-|Otros|1. Envío de recordatorio de reserva por email|
+|Listados |1. Listado de productos filtrado por tipo de productos/marca, muestra nombre,descripcion,talle y precio <br>2. 2. Listado de pedidos entregados filtrado por rango de fecha, muestra idPedido, fechaPedido nombre y apellido de cliente y total|
+|CUU/Epic|1. 3. Cancelar un pedido<br>2. Reponer stock|
+|Otros|1. Envio de recordatorio de pedido por mail|
 
