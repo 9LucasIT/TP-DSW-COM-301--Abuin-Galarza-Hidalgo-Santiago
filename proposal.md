@@ -30,10 +30,10 @@ Modelo de dominio: [https://drive.google.com/drive/folders/1plfqKYozPPYJY6YgyQEi
 Regularidad:
 |Req|Detalle|
 |:-|:-|
-|CRUD simple|1. CRUD Tipo Habitacion<br>2. CRUD Servicio<br>3. CRUD Localidad|
-|CRUD dependiente|1. CRUD Habitación {depende de} CRUD Tipo Habitacion<br>2. CRUD Cliente {depende de} CRUD Localidad|
-|Listado<br>+<br>detalle| 1. Listado de habitaciones filtrado por tipo de habitación, muestra nro y tipo de habitación => detalle CRUD Habitacion<br> 2. Listado de reservas filtrado por rango de fecha, muestra nro de habitación, fecha inicio y fin estadía, estado y nombre del cliente => detalle muestra datos completos de la reserva y del cliente|
-|CUU/Epic|1. Reservar una habitación para la estadía<br>2. Realizar el check-in de una reserva|
+|CRUD simple|1. CRUD Tipo producto<br>2. CRUD Pedido<br>3. CRUD Precio|
+|CRUD dependiente|1. CRUD Producto {depende de} CRUD Tipo Producto<br>2. CRUD Precio {depende de} CRUD Producto|
+|Listado<br>+<br>detalle| 1. Listado de productos filtrado por tipo de productos/marca, muestra nombre,descripcion,talle y precio => detalle CRUD Producto<br> 2. Listado de pedidos entregados filtrado por rango de fecha, muestra idPedido, fechaPedido nombre y apellido de cliente y total|
+|CUU/Epic|1. Realizar un pedido<br>2. Reponer stock<br>3. Cancelar pedido<br>4. Envio de recordatorio de pedido por mail|
 
 
 Adicionales para Aprobación
