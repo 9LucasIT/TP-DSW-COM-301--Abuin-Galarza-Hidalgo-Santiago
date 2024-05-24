@@ -9,7 +9,7 @@
 
 ### Repositorios
 * [frontend app](http://hyperlinkToGihubOrGitlab)
-* [backend app]((https://github.com/leoabuin/proyecto-venta-productos))
+* [backend app](https://github.com/leoabuin/proyecto-venta-productos)
 *Nota*: si utiliza un monorepo indicar un solo link con fullstack app.
 
 ## Tema
