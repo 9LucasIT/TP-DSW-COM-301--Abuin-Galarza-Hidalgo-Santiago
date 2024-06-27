@@ -8,9 +8,9 @@
 * (50729) Abuin, Leonel
 
 ### Repositorios
-* [frontend app](http://hyperlinkToGihubOrGitlab)
+* [frontend app](https://github.com/leoabuin/proyecto-venta-productos-front-end.git)
 * [backend app](https://github.com/leoabuin/proyecto-venta-productos)
-*Nota*: si utiliza un monorepo indicar un solo link con fullstack app.
+
 
 ## Tema
 ### Descripción
