@@ -32,7 +32,7 @@ Regularidad:
 |:-|:-|
 |CRUD simple|1. CRUD Category<br>2. CRUD Brand<br>3. CRUD Price <br>4. CRUD User|
 |CRUD dependiente|1. CRUD Product {depende de} CRUD Category y Brand<br>2. CRUD Price {depende de} CRUD Product <br>3. CRUD Order {depende de} Product y User|
-|Listado<br>+<br>detalle| 1. Listado de productos filtrado por tipo de productos/marca, muestra nombre,descripcion,talle y precio => detalle CRUD Producto<br> 2. Listado de pedidos entregados filtrado por rango de fecha, muestra idPedido, fechaPedido nombre y apellido de cliente y total|
+|Listado<br>+<br>detalle| 1.  Listado de productos filtrado por categoria, muestra nombre,descripcion,talle y precio => detalle CRUD Producto<br> 2. Listado de pedidos de un usaurio(los pedidos pueden estar en estado 'pendientes', que se pueden cancelar y en estado 'cancelado')|
 |CUU/Epic|1. Realizar un pedido<br>2. Reponer stock<br>3. Cancelar pedido<br>4. Envio de recordatorio de pedido por mail|
 
 
@@ -49,7 +49,7 @@ Adicionales para Aprobación
 
 |Req|Detalle|
 |:-|:-|
-|Listados |1. Listado de productos filtrado por categoria, muestra nombre,descripcion,talle y precio <br>2. 2. Listado de pedidos de un usaurio(los pedidos pueden estar en estado 'pendientes', que se pueden cancelar y en estado 'cancelado')|
+|Listados |1. Listado de productos filtrado por categoria, muestra nombre,descripcion,talle y precio <br>2. Listado de pedidos de un usaurio(los pedidos pueden estar en estado 'pendientes', que se pueden cancelar y en estado 'cancelado')|
 |CUU/Epic|1. 3. Cancelar un pedido<br>2. Reponer stock|
 |Otros|1. Envio de recordatorio de pedido por mail|
 
