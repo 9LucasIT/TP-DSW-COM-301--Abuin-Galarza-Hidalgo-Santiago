@@ -14,7 +14,7 @@
 
 ## Tema
 ### Descripción
-*2 a 6 líneas describiendo el negocio (menos es más)*
+*Nuestra aplicacion es un ecommerce en donde se vende articulos de indumentaria deportiva. En este se crea una cuenta, se inicia sesion y ya puede realizar un pedido. El cliente va agregando productos a su carrito y una vez lo decida, va al apartado de carrito donde se van a encontrar todos los productos que agrego y finaliza el pedido. El cliente si se arrepiente puede cancelar el pedido siempre y cuando el pedido se encuentre en estado 'Pendiente'. De parte del empleado, tambien se crea una cuenta y puede agregar, modificar y eliminar las marcas, categorias, distribuidores y productos. (como regla de negocio decidimos que el producto no se elimina para evitar conflictos con los clientes que compraron ese producto. Se puede dar de baja logica). Tambien el empleado puede programar un cambio de precio del producto en el apartado 'agregar precio'*
 
 ### Modelo
 ![imagen del modelo]()
@@ -30,8 +30,8 @@ Modelo de dominio: [https://drive.google.com/drive/folders/1plfqKYozPPYJY6YgyQEi
 Regularidad:
 |Req|Detalle|
 |:-|:-|
-|CRUD simple|1. CRUD Tipo producto<br>2. CRUD Pedido<br>3. CRUD Precio|
-|CRUD dependiente|1. CRUD Producto {depende de} CRUD Tipo Producto<br>2. CRUD Precio {depende de} CRUD Producto|
+|CRUD simple|1. CRUD Category<br>2. CRUD Brand<br>3. CRUD Price <br>4. CRUD User|
+|CRUD dependiente|1. CRUD Product {depende de} CRUD Category y Brand<br>2. CRUD Price {depende de} CRUD Product <br>3. CRUD Order {depende de} Product y User|
 |Listado<br>+<br>detalle| 1. Listado de productos filtrado por tipo de productos/marca, muestra nombre,descripcion,talle y precio => detalle CRUD Producto<br> 2. Listado de pedidos entregados filtrado por rango de fecha, muestra idPedido, fechaPedido nombre y apellido de cliente y total|
 |CUU/Epic|1. Realizar un pedido<br>2. Reponer stock<br>3. Cancelar pedido<br>4. Envio de recordatorio de pedido por mail|
 
@@ -49,7 +49,7 @@ Adicionales para Aprobación
 
 |Req|Detalle|
 |:-|:-|
-|Listados |1. Listado de productos filtrado por tipo de productos/marca, muestra nombre,descripcion,talle y precio <br>2. 2. Listado de pedidos entregados filtrado por rango de fecha, muestra idPedido, fechaPedido nombre y apellido de cliente y total|
+|Listados |1. Listado de productos filtrado por categoria, muestra nombre,descripcion,talle y precio <br>2. 2. Listado de pedidos de un usaurio(los pedidos pueden estar en estado 'pendientes', que se pueden cancelar y en estado 'cancelado')|
 |CUU/Epic|1. 3. Cancelar un pedido<br>2. Reponer stock|
 |Otros|1. Envio de recordatorio de pedido por mail|
 
