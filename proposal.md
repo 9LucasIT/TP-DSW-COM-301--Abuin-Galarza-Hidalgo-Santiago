@@ -1,6 +1,6 @@
-# Propuesta TP DSW
+# Propuesta TP DSW - Sportify
 
-## Grupo
+## Grupo: Sportify Team
 ### Integrantes
 * (51219) Santiago, Lucas
 * (50972) Hidalgo, Tomas
@@ -8,48 +8,54 @@
 * (50729) Abuin, Leonel
 
 ### Repositorios
-* [frontend app](https://github.com/leoabuin/proyecto-venta-productos-front-end.git)
-* [backend app](https://github.com/leoabuin/proyecto-venta-productos)
-
+* **Frontend App:** [https://github.com/leoabuin/proyecto-venta-productos-front-end.git](https://github.com/leoabuin/proyecto-venta-productos-front-end.git)
+* **Backend App:** [https://github.com/leoabuin/proyecto-venta-productos](https://github.com/leoabuin/proyecto-venta-productos)
 
 ## Tema
 ### Descripción
-*Nuestra aplicacion es un ecommerce en donde se vende articulos de indumentaria deportiva. En este se crea una cuenta, se inicia sesion y ya puede realizar un pedido. El cliente va agregando productos a su carrito y una vez lo decida, va al apartado de carrito donde se van a encontrar todos los productos que agrego y finaliza el pedido. El cliente si se arrepiente puede cancelar el pedido siempre y cuando el pedido se encuentre en estado 'Pendiente'. De parte del empleado, tambien se crea una cuenta y puede agregar, modificar y eliminar las marcas, categorias, distribuidores y productos. (como regla de negocio decidimos que el producto no se elimina para evitar conflictos con los clientes que compraron ese producto. Se puede dar de baja logica). Tambien el empleado puede programar un cambio de precio del producto en el apartado 'agregar precio'*
+**Sportify** es una plataforma de e-commerce especializada en indumentaria y artículos deportivos. El sistema permite a los usuarios finales registrarse, gestionar su perfil y realizar pedidos mediante un flujo de carrito de compras. Los clientes pueden monitorear sus pedidos y cancelarlos de forma autónoma siempre que permanezcan en estado **"Pendiente"**.
 
-### Modelo
-![imagen del modelo]()
+Para la gestión interna, el sistema cuenta con un **Panel de Administración (Dashboard)** donde el personal (rol Empleado) puede administrar el catálogo completo: Marcas, Categorías, Géneros, Distribuidores y Productos. 
 
-*Nota*: incluir un link con la imagen de un modelo, puede ser modelo de dominio, diagrama de clases, DER. Si lo prefieren pueden utilizar diagramas con [Mermaid](https://mermaid.js.org) en lugar de imágenes.
-Modelo de dominio: [https://drive.google.com/file/d/1neXWdzIUvrLoi-6OUHP_fwk_c0u03O-7/view?usp=drive_link]
+**Reglas de Negocio Destacadas:**
+1. **Baja Lógica:** Los productos no se eliminan físicamente de la base de datos para preservar la integridad histórica de las órdenes de compra; en su lugar, se implementa una baja lógica (`isContinuated: false`).
+2. **Gestión de Precios:** Los empleados pueden programar y actualizar los precios de los productos, manteniendo un historial de cambios.
+3. **Seguridad Robusta:** Autenticación mediante **JWT** almacenado en **Cookies HttpOnly** para prevenir ataques XSS, con autorización diferenciada por roles mediante Middlewares.
+
+### Modelo de Dominio
+El diagrama representa las entidades principales (Producto, Marca, Categoría, Orden, Ítem de Orden, Usuario, Distribuidor, Género y Comentario) y sus relaciones.
+
+* **Imagen del Modelo:** [Visualizar Modelo de Dominio](https://drive.google.com/file/d/1neXWdzIUvrLoi-6OUHP_fwk_c0u03O-7/view?usp=drive_link)
+
+---
+
 ## Alcance Funcional 
 
-### Alcance Mínimo
+### Alcance Mínimo (Regularidad)
 
-*Nota*: el siguiente es un ejemplo para un grupo de 3 integrantes para un sistema de hotel. El 
+| Req | Detalle |
+| :--- | :--- |
+| **CRUD Simple** | 1. CRUD Categoría<br>2. CRUD Marca<br>3. CRUD Género<br>4. CRUD Usuario |
+| **CRUD Dependiente** | 1. **CRUD Producto**: Relacionado con Categoría, Marca y Género.<br>2. **CRUD Precio**: Historial dependiente de Producto.<br>3. **CRUD Distribuidor**: Gestión de proveedores vinculados al stock. |
+| **Listado + Detalle** | 1. **Catálogo de Productos**: Filtrado dinámico por Categoría, Marca y Género. Incluye vista de detalle.<br>2. **Gestión de Pedidos**: Listado histórico de órdenes por usuario con estados (Pendiente / Cancelado). |
+| **CUU / Epic** | 1. **Realizar Pedido**: Flujo completo de carrito y persistencia de orden.<br>2. **Cancelación de Pedido**: Lógica de anulación por parte del cliente.<br>3. **Notificación Automática**: Envío de comprobante de pedido vía Email (EmailJS/SMTP). |
 
-Regularidad:
-|Req|Detalle|
-|:-|:-|
-|CRUD simple|1. CRUD Category<br>2. CRUD Brand<br>3. CRUD Price <br>4. CRUD User|
-|CRUD dependiente|1. CRUD Product {depende de} CRUD Category y Brand<br>2. CRUD Price {depende de} CRUD Product <br>3. CRUD Order {depende de} Product y User|
-|Listado<br>+<br>detalle| 1.  Listado de productos filtrado por categoria, muestra nombre,descripcion,talle y precio => detalle CRUD Producto<br> 2. Listado de pedidos de un usaurio(los pedidos pueden estar en estado 'pendientes', que se pueden cancelar y en estado 'cancelado')|
-|CUU/Epic|1. Realizar un pedido<br>2. Reponer stock<br>3. Cancelar pedido<br>4. Envio de recordatorio de pedido por mail|
+### Alcance Adicional (Aprobación / Dashboard Admin)
 
+| Req | Detalle |
+| :--- | :--- |
+| **Dashboard de Gestión** | Panel centralizado para el empleado que permite la administración total de las entidades del sistema sin salir de la interfaz administrativa. |
+| **Seguridad Avanzada** | Implementación de **Role-Based Access Control (RBAC)** con Guards en el Frontend y Middlewares en el Backend para proteger rutas sensibles. |
+| **Sistema de Feedback** | Implementación de **Comentarios y Calificaciones** donde los usuarios pueden interactuar con los productos adquiridos. |
+| **Optimización de UI** | Implementación de Loading Spinners, validaciones de formularios con **Zod** (Backend) y **Reactive Forms** (Frontend). |
 
-Adicionales para Aprobación
-|Req|Detalle|
-|:-|:-|
-|CRUD |1. CRUD Tipo Producto<br>2. CRUD Precio<br>3. CRUD Cliente<br>4. CRUD Pedido<br>5. CRUD Producto<br>6. CRUD Marca<br>7. CRUD -|
-|CUU/Epic|1. Realizar un pedido<br>2. Reponer stock<br>3. Cancelar un pedido<br>4. Envio de recordatorio de pedido por mail|
-
+---
 
 ### Alcance Adicional Voluntario
 
-*Nota*: El Alcance Adicional Voluntario es opcional, pero ayuda a que la funcionalidad del sistema esté completa y será considerado en la nota en función de su complejidad y esfuerzo.
-
-|Req|Detalle|
-|:-|:-|
-|Listados |1. Listado de productos filtrado por categoria, muestra nombre,descripcion,talle y precio <br>2. Listado de pedidos de un usaurio(los pedidos pueden estar en estado 'pendientes', que se pueden cancelar y en estado 'cancelado')|
-|CUU/Epic|1. 3. Cancelar un pedido<br>2. Reponer stock|
-|Otros|1. Envio de recordatorio de pedido por mail|
+| Req | Detalle |
+| :--- | :--- |
+| **Filtros de Ofertas** | Atributo `isOffer` en productos que permite destacar artículos en la página principal y filtrar en el catálogo. |
+| **Lista de Favoritos** | Funcionalidad para que el cliente guarde productos de interés para compras futuras (Wishlist). |
+| **Infraestructura Cloud** | Despliegue automatizado (CI/CD) en **Railway** utilizando Docker/Nginx para el Frontend y Node.js para el Backend. |
 
