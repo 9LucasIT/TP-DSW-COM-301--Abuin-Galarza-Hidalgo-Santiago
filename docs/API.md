@@ -1,4 +1,3 @@
-```markdown
 # Documentación de API - Sportify
 
 Esta API utiliza una arquitectura RESTful y responde en formato JSON.
