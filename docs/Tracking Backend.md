@@ -48,6 +48,6 @@ Este documento recopila el historial completo de commits que marcan el avance de
 | Auto stash y merge de mikroormDistributor | Completo | leoabuin | 30-08-25 | Features |
 | Merge branch: ProductPriceMemory | Completo | leoabuin | 09-08-25 | Features |
 | Merge branch: crearCRUDdistributors | Completo | leoabuin | 29-06-25 | Features |
-| Merge Pull Request #2 de TomasHidalgo2024 | Completo | leoabuin | 26-05-25 | Features |
-| Merge Pull Request #1 de TomasHidalgo2024 | Completo | leoabuin | 26-05-25 | Features |
+| Merge Pull Request #2 de TomasHidalgo2024 | Completo | TomasHidalgo2024 | 26-05-25 | Features |
+| Merge Pull Request #1 de TomasHidalgo2024 | Completo | TomasHidalgo2024 | 26-05-25 | Features |
 | Setup inicial del proyecto y estructura base | Completo | leoabuin | 23-05-25 | Features |
