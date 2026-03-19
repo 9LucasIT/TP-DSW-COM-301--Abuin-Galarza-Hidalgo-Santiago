@@ -25,7 +25,7 @@ Para la gestión interna, el sistema cuenta con un **Panel de Administración (D
 ### Modelo de Dominio
 El diagrama representa las entidades principales (Producto, Marca, Categoría, Orden, Ítem de Orden, Usuario, Distribuidor, Género y Comentario) y sus relaciones.
 
-* **Imagen del Modelo:** [Visualizar Modelo de Dominio](docs/images/Modelo de dominio TP DSW Sportify.drawio..png)
+* **Imagen del Modelo:** [Visualizar Modelo de Dominio](docs/images/Modelo de dominio TP DSW Sportify.drawio.png)
 
 ---
 
