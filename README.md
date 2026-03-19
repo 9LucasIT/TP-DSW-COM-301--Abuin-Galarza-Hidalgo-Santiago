@@ -4,7 +4,7 @@ Repositorio central del Trabajo Práctico de Desarrollo de Software.
 
 **Sportify** es una aplicación web full stack diseñada para la administración y venta de artículos deportivos. Permite la gestión completa de productos, categorías, marcas, distribuidores y usuarios, con un sistema de permisos basado en roles.
 
-![Sportify-Banner](docs/SportifyPortada.png) ## Estructura del Proyecto
+![Sportify-Banner](docs/images/SportifyPortada.png) ## Estructura del Proyecto
 
 El proyecto está dividido en dos grandes bloques:
 
