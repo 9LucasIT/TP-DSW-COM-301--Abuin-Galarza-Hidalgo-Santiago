@@ -44,7 +44,7 @@ El proyecto está dividido en dos grandes bloques:
 Un punto clave de este proyecto es la protección de las rutas del servidor. Se implementaron middlewares para asegurar que solo los usuarios autorizados realicen cambios:
 
 * **Público:** Visualización de productos, marcas y categorías.
-* **Privado (Empleado):** CRUD de productos, gestión de distribuidores, marcas y géneros.
+* **Privado (Empleado):** CRUD de productos, gestión de distribuidores, marcas y géneros, visualizacion de dashboards con estadisticas claves para toma de decisiones.
 
 > **Middleware de validación:** El servidor verifica la presencia y validez del token en cada petición sensible, asegurando que el `rol` del usuario coincida con la acción solicitada.
 
